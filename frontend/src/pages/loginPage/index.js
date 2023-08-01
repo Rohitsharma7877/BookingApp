@@ -1,5 +1,8 @@
 import React from 'react'
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
+import Form from './Form';
+
+
 
 const LoginPage = () => {
 const theme= useTheme()
@@ -8,14 +11,14 @@ const isNonMobileScreens =useMediaQuery("(min-width:1000px)");
 
   return (
     <Box>.
-    <Box width='100%' backgroundColor={theme.palette.backgroundColor.alt} p='1rem 6%' textAlign='center'>
+    <Box width='100%' backgroundColor={theme.palette.background.alt} p='1rem 6%' textAlign='center'>
     <Typography
           fontWeight="bold"
           fontSize="32px"
           color="primary"       
         >textbook</Typography>              
     </Box>
-<Box width={isNonMobileScreens ? "50%": "93"}
+<Box width={isNonMobileScreens ? "50%": "70"}
 p='2rem' 
 m='2rem auto' 
 backgroundColor={theme.palette.background.alt} 
@@ -26,6 +29,8 @@ borderRadius='1.5rem'>
   sx={{mb:"1.5rem"}}>
   welcome to textBook media
   </Typography>
+
+  <Form />
  
 
 
